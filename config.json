@@ -1,0 +1,4 @@
+{
+  "namespaces": "default,kube-system",
+  "resource_types": "podsecuritypolicy,daemonset,deployment,pod,replicaset,replicationcontroller,statefulset,cronjob,job,configmap,ingress,role,rolebinding,serviceaccount,clusterrolebinding,clusterrole,admissionconfiguration"
+}
