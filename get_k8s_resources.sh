@@ -18,6 +18,11 @@ for ns in $namespaces; do
 
     # Loop through each resource type
     for resource in $resource_types; do
+        # Skip secrets resource type
+        if [ "$resource" == "secrets" ]; then
+            continue
+        fi
+
         # Get all resources of this type in the namespace
         resources=$(kubectl get $resource --namespace $ns -o jsonpath='{range .items[*]}{.metadata.name}{"\n"}{end}')
 
